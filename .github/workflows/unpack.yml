@@ -1,3 +1,4 @@
+
 name: Unpack Bedrock UI project
 
 on:
@@ -17,7 +18,7 @@ jobs:
       - name: Extract project ZIP
         run: |
           if [ ! -f "Bedrock-UI-project.zip" ]; then
-            echo "ERROR: Bedrock-UI-project.zip was not found in the repository root."
+            echo "ZIP archive not found"
             exit 1
           fi
 
@@ -25,23 +26,23 @@ jobs:
           unzip -q -o "Bedrock-UI-project.zip" -d /tmp/bedrock-ui
 
           if [ ! -d "/tmp/bedrock-ui/Bedrock-UI" ]; then
-            echo "ERROR: The ZIP does not contain the expected Bedrock-UI folder."
+            echo "Project folder not found inside ZIP"
             exit 1
           fi
 
           cp -a /tmp/bedrock-ui/Bedrock-UI/. .
           rm "Bedrock-UI-project.zip"
 
-      - name: Save extracted project files to GitHub
+      - name: Commit extracted files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
 
-          if git diff --cached --quiet; then
-            echo "No changes to save."
-          else
-            git commit -m "Add Bedrock UI project files"
+          git add -A
+          git reset -- .github/workflows
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract Bedrock UI project"
             git push
           fi
           
