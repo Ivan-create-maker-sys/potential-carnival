@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bedrock-ui",
+  "version": "${version}",
+  "name": "Bedrock UI",
+  "description": "A client-side, Bedrock-inspired interface project for Minecraft Java Edition.",
+  "authors": ["Bedrock UI contributors"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.bedrockui.BedrockUIClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

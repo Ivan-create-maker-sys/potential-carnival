@@ -1,0 +1,9 @@
+{
+  "bedrock-ui.category": "Bedrock UI",
+  "bedrock-ui.settings.title": "Настройки Bedrock UI",
+  "bedrock-ui.settings.creative_layout": "Расположение творческого инвентаря как в Bedrock",
+  "bedrock-ui.settings.two_click_swap": "Перемещение предметов двумя нажатиями",
+  "bedrock-ui.settings.cursor_tooltip": "Информация о предмете возле курсора",
+  "bedrock-ui.settings.chat_controls": "Кнопки управления чатом",
+  "bedrock-ui.settings.controls_panel": "Панель подсказок управления"
+}

@@ -1,0 +1,9 @@
+{
+  "bedrock-ui.category": "Bedrock UI",
+  "bedrock-ui.settings.title": "Bedrock UI Settings",
+  "bedrock-ui.settings.creative_layout": "Bedrock-style creative layout",
+  "bedrock-ui.settings.two_click_swap": "Two-click inventory swapping",
+  "bedrock-ui.settings.cursor_tooltip": "Item information near cursor",
+  "bedrock-ui.settings.chat_controls": "Chat navigation controls",
+  "bedrock-ui.settings.controls_panel": "On-screen controls panel"
+}
